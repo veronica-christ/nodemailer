@@ -1,0 +1,46 @@
+
+
+.main, 
+.pages {
+  padding: 2%;
+}
+
+.pages {
+  display: flex;
+  justify-content: space-evenly;
+  width: 10%;
+  padding: 12px;
+  margin-left: 40px;
+  color: #0275D8;
+}
+
+.pages-button {
+  display: flex;
+  //justify-content: space-between;
+  margin-top: 290px;
+  width: 100%;
+  
+}
+
+.pages div {
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+button {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.sub-cancel {
+  display: flex;
+  justify-content: space-between;
+  // height: 28%;
+ 
+  margin-left: 75%;
+  // margin-top: 200px;
+}
+.submit{
+  background-color: #00F937;
+}

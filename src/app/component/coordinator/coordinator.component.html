@@ -1,0 +1,104 @@
+<div class="container mb-5">
+  <div class="content">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats" *ngFor="let act of active">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-globe text-warning"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">{{act.status}}</p>
+                  <p class="card-title">{{act.total}}
+                  <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <div class="stats">
+              <i class="fa fa-refresh"></i> {{act.updated_at}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats" *ngFor="let deact of deactive">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-globe text-warning"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">{{deact.status}}</p>
+                  <p class="card-title">{{deact.total}}
+                  <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <div class="stats">
+              <i class="fa fa-refresh"></i> {{deact.updated_at}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="jumbotron">
+  <div class="col-md-12">
+    <div class="card scroller">
+      <table mdbTable mdbTableScroll scrollx="true" maxWidth="400" class="table table-sm ">
+        <thead>
+          <tr class="p">
+            <th class="th-sm p">Id</th>
+            <th class="th-sm">Title</th>
+            <th class="th-sm style=width:70%">Description</th>
+            <th class="th-sm style=text-align:left">Status</th>
+            <th class="th-sm style=text-align:center style=width:70%">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of myData; let i = index">
+            <td class="th-sm a">{{data.survid}} 1</td>
+            <td>{{data.title}}</td>
+            <td>{{data.description}}</td>
+            <td class="th-sm a">{{data.status}}</td>
+
+            <td><i class="fa fa-pencil text-info"></i></td>
+            <td><i class="fa fa-eye text-success"></i> view</td>
+          </tr>
+        </tbody>
+     
+        <tr *ngFor="let item of survey">
+          <td> {{item.id}}</td>
+          <td> {{item.title}}</td>
+          <td> {{item.discription}}</td>
+          <td> {{item.status}}</td>
+          <td>
+            <button type="button" class="btn btn-sm q m-3">Results</button>
+            <button type="button" class="btn btn-sm s m-3">active</button>
+            <button type="button" class="btn btn-sm d m-3">Delete</button>
+
+          </td>
+        </tr>
+   
+      </table>
+    </div>
+
+  </div>
+
+
+</div>

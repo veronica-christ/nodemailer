@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #011345">
+    <div class="container">
+        <a class="navbar-brand" class="logo" ></a>
+        <img src="../../../assets/images/logo.png">
+    
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"></a>
+                </li>
+            
+            </ul>
+            
+            <form class="d-flex my-2 my-lg-0" >
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item" *ngIf="!usertpe" >
+                        <a class="nav-link" routerLink="/create" >Create Survey
+                        
+                        </a>
+                    </li>
+            
+                    <!-- <li class="nav-item" >
+                        <a class="nav-link" >List of Surveys</a>
+                    </li>
+            
+            
+                    <li class="nav-item" *ngIf="usertpe != 'coordinator' ">
+                        <a class="nav-link">List of Active Surveys</a>
+                    </li> -->
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><h5 class="dropdown-item-text mb-0">{{username}}</h5></li>
+                          <li> <p class="dropdown-item-text text-muted mb-0">{{email}}</p></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a  class="dropdown-item">Profile</a></li>
+                          <li><a  class="dropdown-item"routerLink="/signin" >Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0" *ngIf="login" >
+                    <li class="nav-item" >
+                            <a class="nav-link" routerLink="signin">Sign In</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" routerLink="signup">Sign up</a>
+                    </li>
+                </ul>
+
+            </form >
+        </div>
+    </div>
+</nav>

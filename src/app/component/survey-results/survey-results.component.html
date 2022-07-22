@@ -1,0 +1,47 @@
+<!--table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col" colspan="2"></th>
+        <th scope="col">Male</th>
+        <th scope="col">Female</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students; index as i">
+        
+        <td colspan="2">Mark</td>
+        <td>{{tableData.male }} </td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        
+        <td colspan="2">Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table-->
+
+  <div style="margin:0 30px;">
+    <h2 style="text-align: center;">Regular HTML Table</h2>
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Country</th>
+        </tr>
+        <tr *ngFor="let student of students; index as i">
+            <td>{{ i }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.gender }}</td>
+            <td>{{ student.country }}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,23 @@
+
+
+
+  <div class="col-12 ">
+ <div class="container col-12 col-xl-12 col-sm-12 pr-5 pt-5 justify-content-center">
+  <form [formGroup]="Form">
+    <div class="form-group col-sm-7 col-xl-4 col-6">
+          <label for="exampleInputEmail1">Enter the email body</label>
+         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" formControlName = "emailbody">
+         <br>
+    </div>
+  
+<br>
+    <div class="form-group col-sm-7 col-xl-4 col-6">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" formControlName = "email">
+        <br>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary" (click)="sendMail()">Send</button>
+  </form>
+</div>
+</div>

@@ -1,0 +1,12 @@
+form .nav-item a:hover{
+    text-decoration: underline;
+    color: white;
+}
+img{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.28));
+}
+@media screen and (max-width: 769px){
+    img{
+        margin-left: -35%;
+    }
+}

@@ -1,0 +1,29 @@
+
+.jumbotron{
+    margin-top: 6%;
+}
+input{
+    width: 100wv;
+    height: 7vh;
+}
+#search::before{
+    border: solid grey 1px;
+
+}
+#search::after{
+    border: solid rgb(68, 202, 255) 1px;
+    
+}
+#search:hover{
+     border: solid rgb(68, 202, 255) 1px;
+}
+
+.btn-results{
+    color: white;
+}
+
+
+.container{
+    background-color:azure;
+}
+

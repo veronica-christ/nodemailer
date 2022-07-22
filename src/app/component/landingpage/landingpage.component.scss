@@ -1,0 +1,41 @@
+.homepage{
+    background-image: url(../../../assets/images/backgrounf.png);
+}
+
+.border{
+    text-align: center;
+}
+button{
+    box-sizing: border-box;
+    background: #011345;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    line-height: 16px;
+    text-align: center;
+    width: 186px;
+    height: 47px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.container{
+    margin-top: 10%;
+}
+
+.card{
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+@media screen and (min-width:320px) and (max-width: 480px){
+    .container{
+        margin-top: 20%;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .container{
+        width: 65vw;
+    }
+}
+

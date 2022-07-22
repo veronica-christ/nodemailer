@@ -1,0 +1,125 @@
+<div class="container mt-5">
+  <div class="row justify-content-center align-items-center ">
+    <div class="col-12 col-lg-9 col-xl-7">
+      <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+        <div class="card-body p-4 p-md-5">
+          <h3 class="mb-42 pb-2 pb-md-0 mb-md-5">Create a survey</h3>
+          <form [formGroup]="Form">
+
+
+            <h1> {{x}}</h1>
+            <form [formGroup]="Form">
+              <div class="form-group col mb-4">
+                <label>Title: </label>
+                <input type="text" id="q" [readonly]="isDisable" formControlName="title"
+                  placeholder="Enter title of the survey" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f['title'].errors }" />
+                <div *ngIf="submitted && f['title'].errors" class="invalid-feedback">
+                  <div *ngIf="f['title'].errors['required']">
+                    Title is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col mb-4">
+                <label>Survey Description:</label>
+                <input type="text" [readonly]="isDisable" formControlName="Decription" placeholder="Enter Description "
+                  class="form-control" [ngClass]="{
+                  'is-invalid': submitted && f['Decription'].errors
+                }" />
+                <div *ngIf="submitted && f['Decription'].errors" class="invalid-feedback">
+                  <div *ngIf="f['Decription'].errors['required']">
+                    Description is required
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col mb-4">
+                <label>code:</label>
+                <input type="text" [readonly]="isDisable" formControlName="Code" placeholder="Enter Code "
+                  class="form-control" [ngClass]="{
+                    'is-invalid': submitted && f['Code'].errors
+                  }" />
+                <div *ngIf="submitted && f['Code'].errors" class="invalid-feedback">
+                  <div *ngIf="f['Code'].errors['required']">
+                    Code is required
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-group col mb-4">
+                <label>Choose survey status: </label>
+                <select [disabled]="isDisable" formControlName="usertype" class="form-control"
+                  placeholder="Select status of the survey"
+                  [ngClass]="{ 'is-invalid': submitted && f['usertype'].errors }">
+                  <option value disabled selected hidden>
+                    Select survey status...
+                  </option>
+                  <option value="Deactivated">Deactive</option>
+                  <option value="Active">Activate</option>
+                </select>
+                <div *ngIf="submitted && f['usertype'].errors" class="invalid-feedback">
+                  <div *ngIf="f['usertype'].errors['required']">
+                    survey status is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col mb-4">
+                <label>Enter a question below:</label>
+                <input type="text" formControlName="question" placeholder="Enter question" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f['question'].errors }" />
+                <div *ngIf="submitted && f['question'].errors" class="invalid-feedback">
+                  <div *ngIf="f['question'].errors['required']">
+                    question is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-md-6 mb-4">
+                <label>Option 1:</label>
+                <input type="text" formControlName="Option1" placeholder="Option1" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f['Option1'].errors }" />
+                <div *ngIf="submitted && f['Option1'].errors" class="invalid-feedback">
+                  <div *ngIf="f['Option1'].errors['required']">
+                    Option 1 is required
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-md-6 mb-4">
+                <label>Option 2:</label>
+                <input type="text" formControlName="Option2" placeholder="Option2" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f['Option2'].errors }" />
+                <div *ngIf="submitted && f['Option2'].errors" class="invalid-feedback">
+                  <div *ngIf="f['Option2'].errors['required']">
+                    Option 2 is required
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="form-group">
+                  <button (click)="save()" class="btn btn-dark" style="background-color:#011345">Save</button>
+                  <button style="float:left" type="button" class="btn btn-danger"
+                    routerLink="/coordinator">Cancel</button>
+                  <button type="submit" (click)="onSubmit()" style="float: right" class="btn btn-warning">
+                    Submit
+                  </button>
+                </div>
+
+              </div>
+
+
+
+              <!-- save -->
+            </form>
+
+
+
+            <div *ngFor="let item of q">
+              <h1> {{q}}</h1>
+
+            </div>
+
+
+            <app-footer></app-footer>
